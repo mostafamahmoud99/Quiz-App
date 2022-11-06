@@ -1,0 +1,16 @@
+#quiz,#finish,#inCorrect,#Correct{
+    display: none;
+}
+.alert{
+    display: none;
+}
+.my-7{
+    margin-top: 7rem;
+}
+.spec{
+    background-color: #8854c0 !important;
+    color: #fff !important;
+}
+svg{
+    z-index: -9999999;
+}

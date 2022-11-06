@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <title>Quiz App</title>
+  </head>
+  <body>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 320"
+      class="position-fixed top-0 start-0"
+    >
+      <path
+        fill="#8854c0"
+        fill-opacity="1"
+        d="M0,192L48,202.7C96,213,192,235,288,224C384,213,480,171,576,154.7C672,139,768,149,864,133.3C960,117,1056,75,1152,80C1248,85,1344,139,1392,165.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+      ></path>
+    </svg>
+    <section id="setting" class="my-7">
+      <div class="container col-md-6">
+        <div class="bg-white overflow-auto shadow-lg rounded-lg">
+          <h1 class="text-center text-spec py-5 bg-light border-bottom">
+            Setting Your Quiz
+          </h1>
+          <div class="p-4">
+            <div class="form-group">
+              <label for="category" class="text-spec">Category</label>
+              <select id="category" class="form-control" name="category">
+                <option value="9">General Knowledge</option>
+                <option value="27">Animals</option>
+                <option value="15">Video Games</option>
+                <option value="23">History</option>
+                <option value="21">Sports</option>
+                <option value="18">Science: Computers</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="difficulty" class="text-spec"> Difficulty</label>
+              <div class="form-check" id="difficulty">
+                <label class="form-check-label">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    name="difficulty"
+                    id="easy"
+                    value="easy"
+                    checked
+                  />
+                  Easy
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    name="difficulty"
+                    id="medium"
+                    value="medium"
+                  />
+                  Medium
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    name="difficulty"
+                    id="hard"
+                    value="hard"
+                  />
+                  Hard
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                type="number"
+                class="form-control"
+                id="Number"
+                placeholder="Number Of questions"
+                required
+              />
+            </div>
+            <button
+              id="startBtn"
+              class="btn float-end py-2 px-4 rounded-pill my-4 spec"
+            >
+              Start
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz" class="my-7">
+      <div class="container col-md-6">
+        <div class="bg-white shadow-lg rounded-lg overflow-auto">
+          <div class="p-3 bg-light border-bottom overflow-auto">
+            <h1 class="text-spec text-center">Quiz</h1>
+            <span class="float-end bg-spec rounded-pill p-2">
+              <span id="current"></span> Of
+              <span id="totalAmount"></span> Question</span
+            >
+
+            <span id="inCorrect" class="btn btn-danger float-start"
+              >InCorrect</span
+            >
+            <span id="Correct" class="btn btn-success float-start"
+              >Correct</span
+            >
+            <div class="clearFix"></div>
+          </div>
+
+          <div class="p-4 text-spec">
+            <h5 class="d-inline">Q:</h5>
+            <h5 id="question" class="d-inline"></h5>
+
+            <div id="rowAnswer">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    name="answer"
+                    id="q1"
+                    value="value"
+                  />
+                  Lorem ipsum dolor sit amet.
+                </label>
+              </div>
+            </div>
+            <div class="alert alert-danger mt-3">Please Choose Your Answer</div>
+            <button
+              class="btn btn-outline-info float-end py-2 px-4 rounded-pill my-4 spec"
+              id="next"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="finish" class="my-7">
+      <div class="container col-md-6">
+        <div class="bg-white shadow-lg rounded overflow-auto text-center">
+          <h1 class="text-spec py-5 bg-light border-bottom">fininsh</h1>
+          <div class="p-4">
+            <h5 class="text-spec">score</h5>
+            <h4 class="text-spec" id="score"></h4>
+            <button
+              class="btn btn-info float-end py-2 px-4 rounded-pill my-4 spec"
+              id="tryBtn"
+            >
+              Try Again?
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js" type="module"></script>
+  </body>
+</html>
